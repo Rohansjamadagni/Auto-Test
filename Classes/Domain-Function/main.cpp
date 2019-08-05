@@ -2,6 +2,6 @@
 using namespace std;
 int main(){
     Domain e;
-    cout<<e.Random(0);
+    cout<<e.Random(10);
     return 0;
 }

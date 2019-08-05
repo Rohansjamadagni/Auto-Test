@@ -11,19 +11,20 @@ typedef std::vector<std::string> svector;
 class Email{
 
 public:
-    std::string Get_Info(std::string,std::string);
     void Add(std::string);
     void Add(std::string,std::string);
     void Remove(std::string);
     void Remove(std::string,std::string);
     void Show();
     void Show(std::string);
-    void Show_Generic_Domains();
-    void Show_Specific_Domains();
     bool Validate(std::string);
     bool Validate(std::string,std::string);
-    bool Check_Validity(std::string);
     std::string Random(int);
+private:
+    bool Check_Validity(std::string);
+    void Show_Specific_Domains();
+    void Show_Generic_Domains();
+    std::string Get_Info(std::string,std::string);
     std::string Random_Name(size_t);
     std::string Random_Domain(size_t);
     std::string Random_Email(int);

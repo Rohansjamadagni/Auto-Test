@@ -6,6 +6,11 @@ int i = 0;
         bool flag= std::regex_match(colour , std::regex("^((#|0x)([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3}))|(^rgb\\((0|255|25[0-4]|2[0-4]\\d|1\\d\\d|0?\\d?\\d),(0|255|25[0-4]|2[0-4]\\d|1\\d\\d|0?\\d?\\d),(0|255|25[0-4]|2[0-4]\\d|1\\d\\d|0?\\d?\\d)\\))"));
         return flag;
     }
+    std::string Colour::Random(){
+        string colour="";
+        colour=Random(colour);
+        return colour;
+    }
 
     std::string Colour::Random(std::string type){
 

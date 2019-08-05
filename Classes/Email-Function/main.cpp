@@ -2,7 +2,6 @@
 using namespace std;
 int main(){
     Email e;
-    e.Add("bro@brother.com","generic");
-    e.Show();
+    cout<<e.Random(10)<<endl;
     return 0;
 }

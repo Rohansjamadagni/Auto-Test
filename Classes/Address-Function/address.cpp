@@ -27,7 +27,7 @@ std::string Address::Random(int x){
             srand(time(0)+i++);
             word3 = Random_Invalid_Word(rand()%4+4);
             address = word3 + " " + word1 + " "+ word2;
-        }while(Check_Validity(address));
+        }while(Validate(address));
     }
     return address;
 }

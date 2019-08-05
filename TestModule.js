@@ -45,5 +45,5 @@ var Pincode = new Pincode1();
 var Telephone = new Telephone1();
 
 module.exports = {
-    Address,City,Colour,Company,Currency,Date,Description,Domain,Email,Mobile,Name,Password,Pincode,Telephone
+    Address,City,Colour,Company,Date,Currency,Description,Domain,Email,Mobile,Name,Password,Pincode,Telephone
 }
