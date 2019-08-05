@@ -2,6 +2,6 @@
 using namespace std;
 int main(){
     Email e;
-    cout<<e.Random(10)<<endl;
+    cout<<e.Random(0)<<endl;
     return 0;
 }
