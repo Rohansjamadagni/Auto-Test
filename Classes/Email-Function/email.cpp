@@ -20,7 +20,6 @@ int i =0;
         randDlength=rand()%3+4;
         std::string email;
         email = Random_Name(randNlength)+"@"+Random_Domain(randDlength)+".com";
-        cout<<email<<endl;
         if(Check_Validity(email)!=x){
             Random(x);
         }
