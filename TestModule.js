@@ -13,6 +13,8 @@ const Variable11=require('./node_modules/Name.node')
 const Variable12=require('./node_modules/Password.node')
 const Variable13=require('./node_modules/Pincode.node')
 const Variable14=require('./node_modules/Telephone.node')
+const Variable15=require('./node_modules/Designation.node')
+const Variable16=require('./node_modules/Gender.node')
 
 var Address1=Variable1.Address;
 var City1=Variable2.City;
@@ -28,6 +30,8 @@ var Name1=Variable11.Name;
 var Password1=Variable12.Password;
 var Pincode1=Variable13.Pincode;
 var Telephone1=Variable14.Telephone;
+var Designation1=Variable15.Designation;
+var Gender1=Variable16.Gender;
 
 var Address = new Address1();
 var City = new City1();
@@ -43,7 +47,9 @@ var Name = new Name1();
 var Password = new Password1();
 var Pincode = new Pincode1();
 var Telephone = new Telephone1();
+var Designation = new Designation1();
+var Gender = new Gender1();
 
 module.exports = {
-    Address,City,Colour,Company,Date,Currency,Description,Domain,Email,Mobile,Name,Password,Pincode,Telephone
+    Address,City,Colour,Company,Date,Currency,Description,Domain,Email,Mobile,Name,Password,Pincode,Telephone,Gender,Designation
 }
