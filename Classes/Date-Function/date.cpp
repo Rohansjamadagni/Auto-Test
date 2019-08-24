@@ -2,7 +2,7 @@
 const int MAX_VALID_YR = 9999; 
 const int MIN_VALID_YR = 1800; 
 bool boo,flag;
-int d,m,y,key,number,s;
+int s;
 
 using namespace std;
 
@@ -326,7 +326,7 @@ using namespace std;
             }
 
             bool Date::setval(std::string s1){
-                int a,b;
+                int a,b,key,number;
                 char dt[s1.size() + 1];
                 s1.copy(dt, s1.size() + 1);
                 dt[s1.size()] = '\0';
