@@ -12,11 +12,12 @@ typedef std::vector<std::string> cvector;
 
 class Pincode       {
     public:
-    void Ccode();
     bool Validate(std::string);
     bool Validate(std::string, std::string);
     std::string Random(bool); 
     std::string Random(bool, std::string);
+private:
+    void Ccode();
     std::string Generate(int);
     std::string Generate_Invalid(int);
     cvector codes;

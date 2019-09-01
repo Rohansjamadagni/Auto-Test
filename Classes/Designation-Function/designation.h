@@ -16,13 +16,13 @@ typedef std::vector<std::string> svector;
 class Designation       {
     public:
         std::string Random(int,int,int,bool);
+        bool Validate(std::string);
         void Add(std::string);
         void Remove(std::string);
         void Show();
         void VectorInit();
     private:
         void writetofile(std::string);
-        bool Validate(std::string);
         std::string Generate(size_t);
         std::string Generate_Invalid(size_t);
         svector desList;

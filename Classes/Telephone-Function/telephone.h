@@ -16,6 +16,7 @@ class Telephone{
         std::string Random(bool); 
         std::string Random(bool, std::string);
         std::string Random(bool, std::string, std::string);
+    private:
         std::string Generate(int);
         std::string Generate_Invalid(int);
 };

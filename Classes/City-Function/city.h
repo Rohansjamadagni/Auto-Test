@@ -13,12 +13,13 @@ class City{
     public:
 
         std::string Random(int);
-        std::string Generate(size_t);
         bool Validate(std::string);
         bool Validate(std::string,std::string);
         void Add(std::string);
         void Remove(std::string);
         void Show();
+    private:
+        std::string Generate(size_t);
         svector cities;
 };
 // NBIND_CLASS(City){
