@@ -1,29 +1,28 @@
-# AUTO-TEST
 
 # **DATE-FUNCTIONS**
 
 
-## Random :
+## Functions :
 
- - random() - Generates random date
- -  random("date",x) - Generates random
-  date before given date if x=0 and after if x =1
-   - random(int,int) -
-   Generates random date between 2 given years
-
+    Random() //Generates Random date
+    Random(string,int)  //Generate Random date before or after given date
+    Random(string,string)  //Generate Random date between given dates
 
 ## Add, subtract and comparison:
 
- - add("date","number of days") - Adds days to date entered
- - subtract("date","number of days")- Subtracts days from date entered
- - equalTo("date1", "date2") - Checks if the dates are equal
- - comparer("date1" , "date2" ) - Checks which date is earlier
+    Add(string,int)  //Add number of days to date entered
+    Subtract(string,int)  //Subtract given number of days from date entered
+    EqualTo(string,string)  //Check of given two dates are equal
+    Compare(string,string)  //Check which date is earlier
+
  
-## Validation:
- - isValidDate("date") - Checks whether the date is valid or not
- 
+## Validate:
+
+    Validate(string)  //Validates entered date
+
 ## Age Calculation:
- - GetAge("date") - Gives the age in years months and days
+
+    Age(string)  //Gives age in years months and days 
 
 # **EMAIL-FUNCTIONS**
 
@@ -31,6 +30,9 @@ Compilation of Several Functions which deals with validation of given email.
 
 
 # Functions
+## Generate Random Email:
+
+    Random(int)  //Generate random email of given length
 
 ## Add Domain:
 
@@ -43,14 +45,12 @@ Compilation of Several Functions which deals with validation of given email.
 ## Show Domain:
 
     Show()  //Displays list of all domains
-    Show_Specific()  //Displays list of all specific domains
-    Show_Generic()  //Displays list of all generic domains
+    Show(string)  //Displays list of all specific or generic domains
 
 ## Validate Email :
 
     Validate(string)  //validates email and checks among the list of domains
     Validate(string,string)  //validates email and checks among the list of given domains
-Examples shown in examples folder.
 
 
 # **COLOUR-FUNCTIONS**
@@ -69,7 +69,7 @@ Compilation of a few Functions which deals with validation and generation of col
 
 # **ADDRESS-FUNCTIONS**
 
-Compilation of a few Functions which deals with validation and generation of colour codes.
+Compilation of a few Functions which deals with validation and generation of Address.
 
 
 # Functions
@@ -81,19 +81,214 @@ Compilation of a few Functions which deals with validation and generation of col
 
     Random(string,int) //generates address of given length
 
-## instructions to build:
+# **CITY-FUNCTIONS**
 
- - Ensure that the required packages are installed
- - run the following commands in the terminal
+Compilation of a few Functions which deals with validation and generation of Cities.
 
-### Commands to build:
 
-    npm install --save \
-    nbind autogypi node-gyp
+# Functions
+
+## Validate City :
+
+    Validate(string)  //validates city
+## Generate Random City:
+
+    Random(string,int) //generates City of given length
+## Remove City:
+
+    Remove(string) //Remove city from list
+
+## Add City:
+
+    Add(string)  //Add city to list
+
+## Show City:
+
+    Show(string)  //Show list of cities
+# **COMPANY-FUNCTIONS**
+
+Compilation of a few Functions which deals with validation and generation of company names.
+
+
+# Functions
+
+## Validate Company :
+
+    Validate(string)  //validates company
+    Validate(string,int) //Validates company of given length
+    Validate(string,string)  //Validates in given list
+
+## Generate Random Company:
+
+    Random(string,int) //generates Company of given length
+## Remove Company:
+
+    Remove(string) //Remove company from list
+
+## Add Company:
+
+    Add(string)  //Add company to list
+
+## Show Company:
+
+    Show(string)  //Show list of companies
+# **CURRENCY-FUNCTIONS**
+
+Compilation of a few Functions which deals with validation and generation of currencies.
+
+
+# Functions
+
+## Generate Random Currency:
+
+    Random(bool) //generates Currency 
+## Get Currency:
+
+    GetCurrencyName(string)
+# **DESCRIPTION-FUNCTIONS**
+
+Function that deals with generation of description.
+
+
+# Functions
+
+## Generate Random Description:
+
+    Random(unsigned long long,int) //generates description of given length
+
+# **DESIGNATION-FUNCTIONS**
+
+Compilation of a few Functions which deals with validation and generation of Designations.
+
+
+# Functions
+## Validate Designation:
+
+    Validate(string)  //validates Designation
+
+## Generate Random Designation:
+
+    Random(int,int,int,bool) //generates Designation of given length
+## Remove Designation:
+
+    Remove(string) //Remove Desigantion from list
+
+## Add Designation:
+
+    Add(string)  //Add Designation to list
+
+## Show Designation:
+
+    Show(string)  //Show list of Designations
+
+# **DOMAIN-FUNCTIONS**
+
+Compilation of Several Functions which deals with validation of Domains.
+
+
+# Functions
+## Generate Random Domain:
+
+    Random(int)  //Generate Random Domain of given length
+
+## Add Domain:
+
+    Add(string)  //adds domain to list of domain
+    Add(string,string)  //adds domain to list of either specific or generic and whole list
+## Remove Domain:
+
+    Remove(string)  //removes domain from list of domains
+    Remove(string,string)  //removes domain from list of either specific or generic domains
+## Show Domain:
+
+    Show()  //Displays list of all domains
+    Show(string)  //Displays list of all specific or generic domains
+
+## Validate Domain:
+
+    Validate(string)  //validates domain and checks among the list of domains
+    Validate(string,string)  //validates domain and checks among the list of given domains
+
+# **GENDER-FUNCTION**
+
+Compilation of Several Functions which deals with validation of Domains.
+
+
+# Functions
+## Validate Gender:
+
+    Validate(string)  //Validate Gender
+
+# **MOBILE-FUNCTIONS**
+
+Compilation of Several Functions which deals with validation of Domains.
+
+
+# Functions
+## Generate Random Mobile Number:
+
+    Random(bool)  //Generate Random Mobile Number
+    Random(bool,string)  //Generate Random Mobile Number of given code
+## Validate Mobile Number:
+
+    Validate(string)  //Validates mobile number
+    Validate(string,string)  //Validates mobile number of given code
+# **NAME-FUNCTIONS**
+
+Compilation of Several Functions which deals with validation of Names.
+
+
+# Functions
+## Generate Random Name:
+
+    Random(int,int,int,bool)  //Generate Random name
+## Validate name:
+
+    Validate(string)  //Validates name
+    Validate(string,int)  //Validates name of given word count
+
+# **TELEPHONE-FUNCTIONS**
+
+Compilation of Several Functions which deals with validation of Telephone.
+
+
+# Functions
+## Generate Random Telephone Number:
+
+    Random(bool)  //Generate Random telephone
+    Random(bool,string)  //Generate Random telephone of given code
+    Random(bool,string,string)  //Generates Telephone of given code and area code 
+## Validate Telephone Number:
+
+    Validate(string)  //Validates telephone
+    Validate(string,string)  //Validates telephone of given code
+    Validate(string,string,string)  //Validates telephone of given code and area code
+# **PINCODE-FUNCTIONS**
+
+Compilation of Several Functions which deals with validation of PIN codes.
+
+
+# Functions
+## Generate Random PIN code:
+
+    Random(bool)  //Generate Random PIN Code
+    Random(bool,string)  //Generate Random PIN code
+## Validate PINCODE:
+
+    Validate(string)  //Validates PINCODE
+    Validate(string,string)  //Validates PINCODE
+# PASSWORD-FUNCTIONS
+Function that deals with generation and validation of functions.
+
+# Functions:
+## Generate Random Password:
+
+    Random(unsigned long,unsigned long) //Generate Password of given min length and max length
+## Validate Password:
+
+    Validate(string,string)  //Validates Password with Capital letters and special characters
+
     
-    make
-
-
 
 > Examples of implementation in examples folder
 
