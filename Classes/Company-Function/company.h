@@ -18,11 +18,12 @@ class Company{
             bool Validate(std::string,int);
             bool Validate(std::string);
             std::string Random(int,int,int,bool);
-            std::string Generate(size_t);
-            std::string Generate_I(size_t);
             void Add(std::string);
             void Remove(std::string);
             void Show();
+        private:
+            std::string Generate(size_t);
+            std::string Generate_I(size_t);
             svector companies;
 };
 

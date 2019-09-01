@@ -12,13 +12,14 @@ typedef std::vector<std::string> cvector;
 
 class Currency       {
     public:
-    void VectorInit();
-    bool Validate(std::string);
-    std::string GetCurrencyName(std::string);
-    std::string Random(bool); 
-    std::string Generate(int);
-    std::string Generate_Invalid(int);
-    cvector CList, UList;
+        bool Validate(std::string);
+        std::string GetCurrencyName(std::string);
+        std::string Random(bool); 
+    private:
+        void VectorInit();
+        std::string Generate(int);
+        std::string Generate_Invalid(int);
+        cvector CList, UList;
 };
 
 #endif 
