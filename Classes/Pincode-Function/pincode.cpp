@@ -45,10 +45,10 @@ std::string Pincode::Random(bool x){
     std::string Full_number;
     srand(time(0)+(i++));
     if(x==1)        { 
-        Full_number += Generate(6);
+        Full_number += Generate(7);
     }
     else        {
-        Full_number += Generate_Invalid(5);
+        Full_number += Generate_Invalid(6);
     }
     return Full_number;
 }

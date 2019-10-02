@@ -1,5 +1,5 @@
 const lib=require('./TestModule')
-// //Date functions
+//Date functions
 
 
 console.log(lib.Date.Random())
@@ -8,7 +8,7 @@ console.log(lib.Date.Random("12-06-2000","21-08-2019"))
 console.log(lib.Date.Add("14-06-2019",25))
 console.log(lib.Date.Subtract("14-06-2019",10))
 console.log(lib.Date.equalTo("14-06-2019","14-06-2019"))
-console.log(lib.Date.Compare("14-06-2019","12-09-1999"))
+lib.Date.Compare("14-06-2019","12-09-1999") //the function itself provides result
 
 
 
@@ -16,18 +16,17 @@ console.log(lib.Date.Compare("14-06-2019","12-09-1999"))
 
 
 
-// console.log(lib.Email.Random(true))
+console.log(lib.Email.Random(true))
 lib.Email.Add("something.com")
 lib.Email.Add("specific.com","specific")
 lib.Email.Add("generic.com","generic")
-// lib.Email.Show()
+console.log(lib.Email.Validate("generic@generic.com","generic"))
+lib.Email.Show()
 lib.Email.Show("specific")
 lib.Email.Show("generic")
-//lib.Email.Remove("generic.com")
-//lib.Email.Remove("specifc.com","specific")
+lib.Email.Remove("generic.com","generic")
+lib.Email.Remove("specific.com","specific")
 lib.Email.Show()
-// console.log(lib.Email.Validate("generic@generic.com","generic"))
-// console.log(lib.Email.Validate("generic@generic.com"))
 
 
 
@@ -77,13 +76,16 @@ console.log(lib.Currency.GetCurrencyName('USD'))
 
 console.log(lib.Description.Random(500,15))// (Number of words,max length of each word)
 
-//Designation Functions **NOT WORKING**
+//Designation Functions ** Validate NOT WORKING**
 
 console.log(lib.Designation.Random(10,2,3,true))
-//Sconsole.log(lib.Designation.Validate(toString(lib.Designation.Random(10,2,3,true))))
 lib.Designation.Add("CO")
 lib.Designation.Show()
 lib.Designation.Remove("CO")
+lib.Designation.Show()
+lib.Designation.VectorInit()
+console.log(lib.Designation.Validate("CO"))
+
 
 //Domain Functions
 
@@ -114,5 +116,25 @@ console.log(lib.Name.Random(8,1,8,true))//Random(Max length of Full name,Number 
 console.log(lib.Name.Validate('Kiara Anne Frank'))  //Every word should be capitalized and seperated by a space
 console.log(lib.Name.Validate(lib.Name.Random(8,2,8,true),2)) 
 console.log(lib.Password.Random(8,8))
-// console.log(lib.Pincode.Random(true))
-// console.log(lib.Telephone.Random(true))
+
+//Pincode Functions  //needs fixing
+
+console.log(lib.Pincode.Random(false))
+console.log(lib.Pincode.Random(true,"560"))  //Generate Random PIN code of given code
+console.log(lib.Pincode.Validate("560063"))
+console.log(lib.Pincode.Validate("560069","560"))  //Validate if given PIN is of given Code type
+
+// Telephone Functions //telephone needs to be fixed and revised
+
+console.log(lib.Telephone.Random(true))
+console.log(lib.Telephone.Random(true,"91"))  //code
+console.log(lib.Telephone.Random(true,"91","69"))  //code and area code
+console.log(lib.Telephone.Validate("+916362764968"))
+console.log(lib.Telephone.Validate("+91916276496899","91"))
+console.log(lib.Telephone.Validate("+9169600362764968","91","69"))
+
+//Password Functions
+
+console.log(lib.Password.Random(5,8)) //Generate Password of given min length and max length
+console.log(lib.Password.Validate("Password123","capital"))  //Validates Password with Capital letters and special characters
+console.log(lib.Password.Validate("Password@123","special"))  //Validates Password with Capital letters and special characters
