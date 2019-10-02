@@ -19,7 +19,7 @@ public:
     void Show(std::string);
     bool Validate(std::string);
     bool Validate(std::string,std::string);
-    std::string Random(int);
+    std::string Random(bool);
 private:
     bool Check_Validity(std::string);
     void Show_Specific_Domains();
@@ -27,7 +27,6 @@ private:
     std::string Get_Info(std::string,std::string);
     std::string Random_Name(size_t);
     std::string Random_Domain(size_t);
-    std::string Random_Email(int);
     svector domains,generic_domains,specific_domains;
     
 

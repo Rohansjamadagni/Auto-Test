@@ -9,7 +9,7 @@ bool Mobile::Validate(std::string number)      {
 }
 
 bool Mobile::Validate(std::string number, std::string code)      {
-    bool flag = std::regex_match(number , std::regex("\\+"+code+"[0-9]{12}"));
+    bool flag = std::regex_match(number , std::regex("\\+"+code+"[0-9]{10}"));
     return flag;
 }
 

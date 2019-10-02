@@ -13,7 +13,7 @@ int i =0;
 
         return (valid);
     }
-    std::string Email::Random(int x){
+    std::string Email::Random(bool x){
         srand(time(0)+(i++));
         int randNlength,randDlength;
         randNlength=rand()%5+6;

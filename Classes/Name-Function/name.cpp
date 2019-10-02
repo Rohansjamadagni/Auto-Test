@@ -4,7 +4,7 @@ using namespace std;
 int i = 0;
 
     bool Name::Validate(std::string name){
-        bool flag= std::regex_match(name , std::regex("^[A-Z]{1}[a-z]+(\\s{1}[A-Z]{1}[a-z]+)+"));
+        bool flag= std::regex_match(name , std::regex("^[A-Z]{1}[a-z]+(\\s{1}[A-Z]+[a-z]*)*"));
         return flag;
     }
 

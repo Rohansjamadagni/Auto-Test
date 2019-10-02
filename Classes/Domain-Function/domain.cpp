@@ -57,7 +57,7 @@ int i =0;
         }
         else
         {
-            throw invalid_argument("Invalid Email format");
+            throw invalid_argument("Invalid Domain format");
         }
         return 0;
         

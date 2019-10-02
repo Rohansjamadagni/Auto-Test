@@ -22,6 +22,7 @@ void Currency :: VectorInit()      {
 }
 
 bool Currency::Validate(std::string unit)      {
+    VectorInit();
     bool flag= std::regex_match(unit , std::regex("[A-Z]{3}"));
     bool flag1 = 0;
     if(flag == 1)
@@ -32,6 +33,7 @@ bool Currency::Validate(std::string unit)      {
 }
 
 std::string Currency::GetCurrencyName(std::string unit)      {
+    VectorInit();
     int pos;
     bool flag= std::regex_match(unit , std::regex("[A-Z]{3}"));
     bool flag1 = 0;
@@ -49,6 +51,7 @@ std::string Currency::GetCurrencyName(std::string unit)      {
 }
 
 std::string Currency::Random(bool x)        {
+    VectorInit();
     std::string Full_number;
     srand(time(0)+(i++));
     if(x==1)
