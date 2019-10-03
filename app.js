@@ -82,8 +82,8 @@ lib.Designation.Add("CO")
 lib.Designation.Show()
 lib.Designation.Remove("CO")
 lib.Designation.Show()
-lib.Designation.VectorInit()
-console.log(lib.Designation.Validate("CO"))
+// lib.Designation.VectorInit()
+// console.log(lib.Designation.Validate("CO"))
 
 
 //Domain Functions
@@ -114,13 +114,12 @@ console.log(lib.Mobile.Validate("+911234567890","91")) //second parameter is the
 console.log(lib.Name.Random(8,1,8,true))//Random(Max length of Full name,Number of words/surnames , Min length of each word/surname ,false-invalid/true-valid)
 console.log(lib.Name.Validate('Kiara Anne Frank'))  //Every word should be capitalized and seperated by a space
 console.log(lib.Name.Validate('Kiara Anne Frank',3))  //validate given number of words 
-// console.log(lib.Name.Validate(lib.Name.Random(8,2,8,true),2)) 
 
-//Pincode Functions  //needs fixing
+//Pincode Functions 
 
 console.log(lib.Pincode.Random(false))  //generate random invalid pincode
 console.log(lib.Pincode.Random(true,"560"))  //Generate Random PIN code of given code
-console.log(lib.Pincode.Validate("560063"))  //validate pincode
+console.log(lib.Pincode.Validate("560063"))  //validate pincode with set of pincodes present in code.txt 
 console.log(lib.Pincode.Validate("560069","560"))  //Validate if given PIN is of given Code type
 
 // Telephone Functions //telephone needs to be fixed and revised

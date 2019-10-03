@@ -15,6 +15,7 @@ void Pincode :: Ccode()      {
 }
 
 bool Pincode::Validate(std::string pin)      {
+    Ccode();
     bool flag1 = 0;
     bool flag = std::regex_match(pin, std::regex("[0-9]{6}"));
     if(flag == 1)       {

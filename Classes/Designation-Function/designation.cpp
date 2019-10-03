@@ -7,36 +7,37 @@ void Designation :: VectorInit()      {
     std::string temp;
     int number;
     ifstream in;
-	in.open("designation.txt");
-    getline(in, temp);
-    number = stoi(temp);
-    for(auto j = 1; j <= number; j++)       {
+	in.open("designation.txt", ios::binary);
+    while (getline (in,temp))   {
         in >> temp;
-        desList.push_back(temp);
+        if(temp != " ")
+            desList.push_back(temp);
     }
     in.close();
 }
 
 void Designation :: writetofile(std::string designation)       {
     ofstream out;
-	out.open("designation.txt");
-    out << designation;
+	out.open("designation.txt", ios::app);
+    out << endl << designation;
     out.close();
 }
  
 bool Designation :: Validate(string designation)     {
-    bool flag= std::regex_match(designation , std::regex("[A-Z]"));
+    bool flag= std::regex_match(designation , std::regex("[A-Z]{1}[a-z]+"));
     if(flag)
         for(auto j = desList.begin(); j != desList.end(); ++j)
-            if(*j == designation)
+            if(*j == designation)   {
                 return 1;
-    else
+            }
+            
+    else if(!flag)
         throw invalid_argument("Invalid Designation");
     return 0;
 }        
 
 std::string Designation :: Random(int length, int number, int Min_Length, bool x)        {
-    if((length<Min_Length)||(Min_Length*number>length))
+    if((length<Min_Length)||(Min_Length*number>=length))
         throw std::invalid_argument("Invalid lengths");
     std::string Full_Designation;
     srand(time(0)+(i++));
@@ -92,9 +93,23 @@ std::string Designation :: Generate_Invalid(size_t length)        {
 }
 
 void Designation :: Add(string designation)       {
-    desList.push_back(designation);
-    for(auto j= desList.begin(); j != desList.end(); ++j)
-        writetofile(*j);
+
+    bool flag=1;
+    string temp;
+    ifstream in;
+	in.open("designation.txt", ios::binary);
+    while (getline (in,temp))   {
+        if(temp == designation)     {
+            flag = 0;
+            break;
+        }
+    }
+    in.close();
+
+    if(flag == 1)       {
+        desList.push_back(designation);
+        writetofile(designation);
+    }
 }
 
 void Designation :: Remove(std::string designation)       {
