@@ -1,9 +1,16 @@
+
+
+// ***Testmodule.js contains the importing and creations of objects from the .node files present in node_modules***
 const lib=require('./TestModule')
+
+
+
+
 //Date functions
 
 
 console.log(lib.Date.Random())  //Returns Random Date
-console.log(lib.Date.Random("12-06-2000",1))  //Returns a random date after given date
+console.log(lib.Date.Random("12-06-2000",1))  //Returns a random date 1 - after given date 0 - before the given date
 console.log(lib.Date.Random("12-06-2000","21-08-2019"))  //Returns a random date between two dates
 console.log(lib.Date.Add("14-06-2019",25))  //Adds number of days to given date
 console.log(lib.Date.Subtract("14-06-2019",10))  //Subtracts number of days from given date
@@ -75,15 +82,15 @@ console.log(lib.Currency.GetCurrencyName('USD'))  //returns currency
 
 console.log(lib.Description.Random(500,15))// (Number of words,max length of each word)
 
-//Designation Functions ** Validate NOT WORKING**
+//Designation Functions 
 
-console.log(lib.Designation.Random(10,2,3,true))
-lib.Designation.Add("CO")
+console.log(lib.Designation.Random(30,2,6,true)) //Random(Total Number of characters, Number of Words,Min length of Each word,Valid-true/invalid-false )
+lib.Designation.Add("CEO")// Adds to the list
+lib.Designation.Add("Janitor")
+lib.Designation.Show() //Shows all the items
+lib.Designation.Remove("CEO") //Removes the item
 lib.Designation.Show()
-lib.Designation.Remove("CO")
-lib.Designation.Show()
-// lib.Designation.VectorInit()
-// console.log(lib.Designation.Validate("CO"))
+console.log(lib.Designation.Validate("Janitor")) //Checks among list of designations added
 
 
 //Domain Functions
@@ -119,10 +126,10 @@ console.log(lib.Name.Validate('Kiara Anne Frank',3))  //validate given number of
 
 console.log(lib.Pincode.Random(false))  //generate random invalid pincode
 console.log(lib.Pincode.Random(true,"560"))  //Generate Random PIN code of given code
-console.log(lib.Pincode.Validate("560063"))  //validate pincode with set of pincodes present in code.txt 
+console.log(lib.Pincode.Validate("560070"))  //validate pincode with set of pincodes present in code.txt 
 console.log(lib.Pincode.Validate("560069","560"))  //Validate if given PIN is of given Code type
 
-// Telephone Functions //telephone needs to be fixed and revised
+// Telephone Functions //telephone needs to be fixed and(7,2,3,true)) revised
 
 console.log(lib.Telephone.Random(true))  //generate random valid telephone number
 console.log(lib.Telephone.Random(true,"91"))  //with code

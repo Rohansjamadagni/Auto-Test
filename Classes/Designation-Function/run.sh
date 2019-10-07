@@ -1,2 +1,2 @@
-g++ main.cpp designation.cpp -o program
+g++ main.cpp Designation.cpp -o program
 ./program

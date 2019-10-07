@@ -1,11 +1,16 @@
-#include "designation.h"
+#include "Designation.h"
 
 using namespace std;
 
 int main()      {
     Designation d;
-    d.Add("CEO");
-    d.VectorInit();
-    cout << d.Validate("CEO") << endl;
+//     d.VectorInit();
+    d.Add("Janitor");
+    d.Add("Ceo");
+    cout << d.Validate("Janitor") << endl;
+    cout << d.Validate("Ceo") << endl;
+    d.Show();
+    d.Remove("Ceo");
+    d.Show();
     return 0;
 }
